@@ -12,17 +12,17 @@ function App() {
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   /* 5 saniyede bir uçuş hareketleri güncellenir */
-  //   const ref = setInterval(() => {
-  //     dispatch(getFlights());
-  //   }, 5000);
+  useEffect(() => {
+    /* 5 saniyede bir uçuş hareketleri güncellenir */
+    const ref = setInterval(() => {
+      dispatch(getFlights());
+    }, 5000);
 
-  //   /* kullanıcı farklı bir sayfaya geçince tekrarı durdurur */
-  //   return () => {
-  //     clearInterval(ref);
-  //   };
-  // }, []);
+    /* kullanıcı farklı bir sayfaya geçince tekrarı durdurur */
+    return () => {
+      clearInterval(ref);
+    };
+  }, []);
 
   /* modal açmak için */
   const openModal = (id) => {
