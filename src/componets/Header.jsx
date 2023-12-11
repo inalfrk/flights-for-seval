@@ -10,7 +10,7 @@ const Header = () => {
         <h2>Flight radar for the most beautiful Flower.</h2>
       </div>
 
-      <h4>{store.isLoading && "Uçuşlar Hesaplanıyor..."}</h4>
+      <h4>{store.isLoading && "Flights are being prepared..."}</h4>
     </header>
   );
 };
